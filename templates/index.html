@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home</title>
+</head>
+<body>
+    <h1>Welcome to the Note App</h1>
+    <a href="{{ url_for('register') }}">Register</a>
+    <a href="{{ url_for('login') }}">Login</a>
+    <a href="{{ url_for('create_note') }}">Create Note</a>
+    {% if session.get('user_id') %}
+        <a href="{{ url_for('my_notes') }}">My Notes</a>
+    {% endif %}
+</body>
+</html>
